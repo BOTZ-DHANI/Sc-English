@@ -811,6 +811,39 @@ reply('Byee... , the bot will leave the group')
 }, 0)
 break
 
+//━━━━[ Feature TextMaker ]━━━━//
+case 'magma':
+     if (args.length < 1) return reply('text?')
+     mag = body.slice(6)
+     magbuf = await getBuffer(`https://api.reysekha.xyz/api/textpro/magma?text=${mag}&apikey=apirey`)
+     Dhani.sendMessage(from, magbuf, image, )
+     break
+case 'hallowen':
+     if (args.length < 1) return reply('text?')
+     ha = body.slice(9)
+     habuf = await getBuffer(`https://api.reysekha.xyz/api/textpro/hallowen-text?text=${ha}&apikey=apirey`)
+     Dhani.sendMessage(from, habuf, image, )
+     break
+case 'neonlight':
+     if (args.length < 1) return reply('text?')
+     ne = body.slice(10)
+     hane = await getBuffer(`https://api.reysekha.xyz/api/textpro/neon-light?text=${ne}&apikey=apirey`)
+     Dhani.sendMessage(from, hane, image, )
+     break
+case 'broken':
+     if (args.length < 1) return reply('text?')
+     bro = body.slice(7)
+     brobef = await getBuffer(`https://api.reysekha.xyz/api/textpro/broken-glass?text=${bro}&apikey=apirey`)
+     Dhani.sendMessage(from, brobef, image, )
+     break
+case 'artpaper':
+     if (args.length < 1) return reply('text?')
+     art = body.slice(9)
+     brobef = await getBuffer(`https://api.reysekha.xyz/api/textpro/art-papper?text=${art}&apikey=apirey`)
+     Dhani.sendMessage(from, brobef, image, )
+     break
+
+
 //━━━━[ Feature Downloader ]━━━━//
 
 case 'ytmp3':
@@ -819,7 +852,7 @@ url = args.join(' ')
 reply(`_audio is being processed, please wait a while longer_`)
 anu = await fetchJson(`https://apidhani.herokuapp.com/api/download/ytmp3?url=${url}&apikey=NisaaCantik`)
 ytmp3 = await getBuffer(anu.result.url)
-Dhani.sendMessage(from, ytmp3, audio, {mimetype:"audio/mp4", quoted:mek})
+Dhani.sendMessage(from, ytmp4, audio, )
 break
 case 'ytmp4':
 if (args.length < 1) return reply("Enter youtube url !!")
